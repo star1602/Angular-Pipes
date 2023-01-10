@@ -1,0 +1,28 @@
+<div class="container"> 
+
+    <h3>USO DE PIPES</h3>
+    <h4>Valor:<input type="text" class="form-control-sm valor" [(ngModel)] = "texto" placeholder="Ingrese un nombre"> </h4>
+    <p> <b>Resultado:</b> {{texto| uppercase}} </p>
+
+    <br>      
+
+    <h3>CURRENCY PIPES</h3>
+    <h4>Valor:<input type="text" class="form-control-sm valor" [(ngModel)] = "num2" placeholder="Ingrese un monto"> </h4>
+    <br>
+        <select aria-label="State"  [(ngModel)]="ordenSelected" class="form-select-lg">
+        <option value="0">Selecciona el tipo de Moneda</option>
+        <option value="1">USD</option>
+        <option value="2">EUR</option> 
+        </select> 
+
+    <div [ngSwitch]="ordenSelected">
+      <p  [ngStyle]="{'color': 'orange'}" *ngSwitchCase="1"><b>Resultado: {{num2|currency:"USD"}}</b></p>
+      <p [ngStyle]="{'color': 'green'}" *ngSwitchCase="2"><b>Resultado: {{num2|currency:"EUR"}}</b></p>
+      <br>
+      <p [ngStyle]="{'color': 'red'}" *ngSwitchDefault><b>(No eligió Moneda)</b></p>
+    </div>
+    
+    <br>
+
+    <h3>TRANSFORM PIPES</h3>   
+<app-tercer-ejercicio></app-tercer-ejercicio>

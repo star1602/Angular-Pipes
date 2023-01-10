@@ -1,0 +1,22 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    text-align: center;
+    margin-top: 2em;
+}
+
+.valor{
+    border-color: rgb(0, 102, 255);
+    border-width: 2px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h3{
+    color: rgb(0, 102, 255);
+}
+

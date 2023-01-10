@@ -1,0 +1,11 @@
+<div>
+      
+    <input type="text"  class="input-group tiempo" [(ngModel)]="fecha" placeholder="Ingrese fecha(mes/día/año) & hora(00:00)" >
+    <br>
+
+    <button (click)="calcular()" class="btn btn_principal">Calcula el tiempo </button>
+    <p>Fecha del día de hoy: {{fa | date: 'shortDate'}}</p>
+    <p><b>Resultado:</b> Fecha :{{fecha | date: 'medium'}}</p>
+    <p><b>Final:{{tiempo}}</b></p>
+    
+</div>
